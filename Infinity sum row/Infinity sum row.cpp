@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <conio.h>
 #include <math.h>
-#include <iomanip>
 
 using namespace std;
 
@@ -11,7 +10,7 @@ int main()
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 
-	long double e, x; // e - эпсилон
+	long double e, x, ln, pog; // e - эпсилон, ln - точное значение, pog - абсолютная погрешность
 	int i = 2; // i - обищй член для продолжения последовательности
 
 	cout << "Расчитываем приближённое значение ln(1 - x) с точностью E" << endl;
@@ -19,7 +18,7 @@ int main()
 	cin >> e;
 	cout << "Введите x: ";
 	cin >> x;
-	while (x >= 1)
+	while (x < 0 || x > 1)
 	{
 		cout << "Попробуйте ещё раз!" << endl;
 		cout << "Введите x: ";
@@ -37,6 +36,14 @@ int main()
 		//cout << "s = " << s << endl;
 		i++;
 	}
-	cout << s;
+
+	ln = log(1 - x);
+	pog = ln - s;
+	cout << "Приближённое значение = " << s << endl;
+	cout << "Точное значение = " << ln << endl;
+	cout << "Абсолютная погрешность = " << pog << endl;
+	cout << "Относительная погрешность = " << pog / ln * 100 << '%' << endl;
+
+	_getch();
 	return 0;
 }
