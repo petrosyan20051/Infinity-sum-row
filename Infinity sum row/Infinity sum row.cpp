@@ -27,12 +27,13 @@ int main()
 	}
 	
 	long double elem = -x, s = -x;
+	//cout << "elem0 = " << elem << endl;
 
 	while (fabs(elem) >= e)
 	{
-		elem = pow(x, i) / i;
+		elem = -(pow(x, i) / i);
 		//cout << "elem" << i - 1 << " = " << elem << endl;
-		s -= elem;
+		s += elem;
 		//cout << "s = " << s << endl;
 		i++;
 	}
