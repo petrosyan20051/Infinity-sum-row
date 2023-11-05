@@ -39,6 +39,7 @@ int main()
 
 	ln = log(1 - x);
 	poga = ln - s;
+	pogo = poga / ln * 100;
 	cout << "Приближённое значение = " << s << endl;
 	cout << "Точное значение = " << ln << endl;
 	cout << "Абсолютная погрешность = " << poga << endl;
