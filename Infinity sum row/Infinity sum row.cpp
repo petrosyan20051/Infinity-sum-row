@@ -12,7 +12,7 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	long double e, x; // e - эпсилон
-	int i = 3, fac = 1; // i - степень и факториал, fac - факториал числа
+	int i = 2; // i - обищй член для продолжения последовательности
 
 	cout << "Расчитываем приближённое значение ln(1 - x) с точностью E" << endl;
 	cout << "Введите точность вычислений E: ";
@@ -26,16 +26,14 @@ int main()
 		cin >> x;
 	}
 	
-
 	long double elem = -x, s = -x;
 
 	while (fabs(elem) >= e)
 	{
-		fac = fac * (i - 1);
-		elem = pow(x, i - 1) / fac;
-		cout << "elem" << i - 1 << " = " << elem << endl;
+		elem = pow(x, i) / i;
+		//cout << "elem" << i - 1 << " = " << elem << endl;
 		s -= elem;
-		cout << "s = " << s << endl;
+		//cout << "s = " << s << endl;
 		i++;
 	}
 	cout << s;
