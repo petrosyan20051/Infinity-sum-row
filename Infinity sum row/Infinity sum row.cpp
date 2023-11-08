@@ -37,6 +37,20 @@ int main()
 		i++;
 	}
 
+	/*
+	int fac = 1;
+	long double elem = -x, s = -x;
+	while (fabs(elem) >= e)
+	{
+		fac = fac * i;
+		elem = -pow(x, i) / fac;
+		//cout << "elem" << i - 1 << " = " << elem << endl;
+		s += elem;
+		//cout << "s = " << s << endl;
+		i++;
+	}
+	*/
+
 	ln = log(1 - x);
 	poga = ln - s;
 	pogo = poga / ln * 100;
