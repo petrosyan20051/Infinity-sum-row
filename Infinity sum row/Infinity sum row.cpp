@@ -25,7 +25,7 @@ int main()
 		cin >> x;
 	}
 	
-	long double elem = -x, s = -x;
+	/*long double elem = -x, s = -x;
 	//cout << "elem0 = " << elem << endl;
 
 	while (fabs(elem) >= e)
@@ -36,8 +36,7 @@ int main()
 		//cout << "s = " << s << endl;
 		i++;
 	}
-
-	/*
+	*/
 	int fac = 1;
 	long double elem = -x, s = -x;
 	while (fabs(elem) >= e)
@@ -49,7 +48,6 @@ int main()
 		//cout << "s = " << s << endl;
 		i++;
 	}
-	*/
 
 	ln = log(1 - x);
 	poga = ln - s;
